@@ -21,6 +21,13 @@ body {
     flex-direction: column;
 }
 
+.mobileResponsiveHome{
+    flex-direction: column;
+}
+
+.mobilePadding{
+    padding: 20px 32px;
+    }
 }
 
 .hideMenuNav {
