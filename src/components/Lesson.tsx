@@ -22,7 +22,7 @@ export function Lesson(props: LessonProps){
     const isActiveLesson =   slug == props.slug
 
     return(
-        <Link to={`/event/lesson/${props.slug}`} className='group'>
+        <Link to={`/event/lesson/${props.slug}`} className='group' onClick={() => setIsNavOpen((prev) => !prev)}>
             <span className="text-gray-300">
                 {availableDateFormatted}
             </span>
@@ -62,4 +62,8 @@ export function Lesson(props: LessonProps){
             </div>
         </Link>
     )
+}
+
+function setIsNavOpen(arg0: (prev: any) => boolean): void {
+    throw new Error('Function not implemented.');
 }

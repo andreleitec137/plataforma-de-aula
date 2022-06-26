@@ -6,7 +6,6 @@ import { Video } from "../components/Video";
 
 export function Event(){
     const { slug } = useParams<{slug: string}> ()
-
     return(
         <div className="flex flex-col min-h-screen">
         <Header /> 
@@ -15,7 +14,9 @@ export function Event(){
                 ?  <Video lessonSlug={slug} /> 
                 : <div className="flex-1" />
                 }
-                <Sidebar /> 
+                 <section className="hidden lg:flex">
+                    <Sidebar /> 
+                </section>
             </main>
         </div>
     )

@@ -25,8 +25,16 @@ export function Video(props: VideoProps){
     }
 
     return(
-        <div className="flex-1">
-            <div className="bg-black flex justify-center">
+        <div className="flex-1 ">
+                <div className="bg-black flex flex-col  lg:hidden">
+                    <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+                        <Player>
+                            <Youtube videoId={data.lesson.videoId} />
+                                <DefaultUi />
+                        </Player>
+                    </div>
+                </div>
+            <div className="bg-black lg:flex justify-center hidden">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
                         <Youtube videoId={data.lesson.videoId} />
@@ -36,7 +44,7 @@ export function Video(props: VideoProps){
             </div>
 
             <div className="p-8 max-w[1100px] mx-auto">
-                <div className="flex item-start gap-16">
+                <div className="flex item-start gap-16  flex-col lg:flex-row">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                         {data.lesson.title}
